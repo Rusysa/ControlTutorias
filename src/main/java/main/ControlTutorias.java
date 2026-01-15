@@ -22,12 +22,12 @@ public class ControlTutorias {
      
         crearDb creardb = new crearDb();
         
-        conexion conexion = new conexion();
+      /*  conexion conexion = new conexion();
         conexion.establecerConexion();
-        
+        */
         //La clase de "creardb" tiene el metodo de establecer conexion que ya dentro llama al metodo que crea las tablas
-        //creardb.establecerConexion();
-        //creardb.cerrarConexion();
+        creardb.establecerConexion();
+        creardb.cerrarConexion();
         
         
         

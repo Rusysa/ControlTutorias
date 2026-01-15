@@ -14,9 +14,12 @@ import java.sql.Statement;
  * @author rudy
  */
 public class conexion {
+   String rutaCarpeta = "src" + File.separator + "main" + File.separator + "java" + File.separator + "db";
    Connection conectar = null;
-    String bd = "dtabase.db";
-    String cadena = "jdbc:sqlite:" + System.getProperty("user.dir")+"/db/"+bd;
+    String archivoBD = "dtabase.db";
+    String cadena = "jdbc:sqlite:" + System.getProperty("user.dir") 
+                                  + File.separator + rutaCarpeta 
+                                  + File.separator + archivoBD;
     
     
         public Connection establecerConexion(){

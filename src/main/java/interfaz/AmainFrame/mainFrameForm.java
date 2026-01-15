@@ -4,6 +4,7 @@
  */
 package interfaz.AmainFrame;
 
+import interfaz.altas.TutoradoAlta;
 import java.awt.Dimension;
 import javax.swing.JDesktopPane;
 
@@ -19,7 +20,6 @@ public class mainFrameForm extends javax.swing.JFrame {
     public static JDesktopPane jDesktopPane_admin;
     public mainFrameForm() {
         initComponents();
-         initComponents();
         this.setSize(new Dimension(1280, 720));
         this.setExtendedState(this.MAXIMIZED_BOTH);
         this.setLocationRelativeTo(null);
@@ -82,10 +82,20 @@ public class mainFrameForm extends javax.swing.JFrame {
         jMenu2.setText("Altas");
         jMenu2.setPreferredSize(new java.awt.Dimension(170, 50));
 
-        jMenuItem1.setText("jMenuItem1");
+        jMenuItem1.setText("Tutorado");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem1);
 
         jMenuItem2.setText("jMenuItem2");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem2);
 
         jMenuItem3.setText("jMenuItem3");
@@ -102,13 +112,13 @@ public class mainFrameForm extends javax.swing.JFrame {
         jMenu3.setText("Bajas");
         jMenu3.setPreferredSize(new java.awt.Dimension(170, 50));
 
-        jMenuItem5.setText("jMenuItem5");
+        jMenuItem5.setText("Tutorado");
         jMenu3.add(jMenuItem5);
 
-        jMenuItem6.setText("jMenuItem6");
+        jMenuItem6.setText("Sesiones");
         jMenu3.add(jMenuItem6);
 
-        jMenuItem13.setText("jMenuItem13");
+        jMenuItem13.setText("Documentos");
         jMenu3.add(jMenuItem13);
 
         jMenuBar1.add(jMenu3);
@@ -166,6 +176,16 @@ public class mainFrameForm extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        TutoradoAlta tutoradoalta = new TutoradoAlta();
+        jDesktopPane_admin.add(tutoradoalta);
+        tutoradoalta.setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
