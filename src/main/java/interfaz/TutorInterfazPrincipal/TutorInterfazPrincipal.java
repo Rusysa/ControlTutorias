@@ -2,9 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package interfaz.AmainFrame;
+package interfaz.TutorInterfazPrincipal;
 
 import interfaz.altas.TutoradoAlta;
+import interfaz.consultas.TutoradoConsulta;
 import java.awt.Dimension;
 import javax.swing.JDesktopPane;
 
@@ -12,13 +13,13 @@ import javax.swing.JDesktopPane;
  *
  * @author rudy
  */
-public class mainFrameForm extends javax.swing.JFrame {
+public class TutorInterfazPrincipal extends javax.swing.JFrame {
 
     /**
      * Creates new form mainFrameForm
      */
     public static JDesktopPane jDesktopPane_admin;
-    public mainFrameForm() {
+    public TutorInterfazPrincipal() {
         initComponents();
         this.setSize(new Dimension(1280, 720));
         this.setExtendedState(this.MAXIMIZED_BOTH);
@@ -50,7 +51,6 @@ public class mainFrameForm extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem14 = new javax.swing.JMenuItem();
@@ -82,7 +82,7 @@ public class mainFrameForm extends javax.swing.JFrame {
         jMenu2.setText("Altas");
         jMenu2.setPreferredSize(new java.awt.Dimension(170, 50));
 
-        jMenuItem1.setText("Tutorado");
+        jMenuItem1.setText("Tutorado Nuevo ingreso");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem1ActionPerformed(evt);
@@ -90,21 +90,18 @@ public class mainFrameForm extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem1);
 
-        jMenuItem2.setText("jMenuItem2");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem3.setText("Tutorado Reingreso");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                jMenuItem3ActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem2);
-
-        jMenuItem3.setText("jMenuItem3");
         jMenu2.add(jMenuItem3);
 
-        jMenuItem4.setText("jMenuItem4");
+        jMenuItem4.setText("Sesion");
         jMenu2.add(jMenuItem4);
 
-        jMenuItem14.setText("jMenuItem14");
+        jMenuItem14.setText("Asistencia");
         jMenu2.add(jMenuItem14);
 
         jMenuBar1.add(jMenu2);
@@ -126,10 +123,20 @@ public class mainFrameForm extends javax.swing.JFrame {
         jMenu4.setText("Consultas");
         jMenu4.setPreferredSize(new java.awt.Dimension(170, 50));
 
-        jMenuItem7.setText("jMenuItem7");
+        jMenuItem7.setText("Tutorados");
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem7ActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuItem7);
 
-        jMenuItem8.setText("jMenuItem8");
+        jMenuItem8.setText("TutoradosDocumentos");
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuItem8);
 
         jMenuBar1.add(jMenu4);
@@ -137,10 +144,15 @@ public class mainFrameForm extends javax.swing.JFrame {
         jMenu5.setText("Modificacion");
         jMenu5.setPreferredSize(new java.awt.Dimension(170, 50));
 
-        jMenuItem9.setText("jMenuItem9");
+        jMenuItem9.setText("Tutorado");
         jMenu5.add(jMenuItem9);
 
-        jMenuItem10.setText("jMenuItem10");
+        jMenuItem10.setText("Documentos");
+        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem10ActionPerformed(evt);
+            }
+        });
         jMenu5.add(jMenuItem10);
 
         jMenuBar1.add(jMenu5);
@@ -183,9 +195,23 @@ public class mainFrameForm extends javax.swing.JFrame {
         tutoradoalta.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
+
+    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem10ActionPerformed
+
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+        TutoradoConsulta tutoradoConsulta = new TutoradoConsulta();
+        jDesktopPane_admin.add(tutoradoConsulta);
+        tutoradoConsulta.setVisible(true);
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -204,20 +230,21 @@ public class mainFrameForm extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(mainFrameForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TutorInterfazPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(mainFrameForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TutorInterfazPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(mainFrameForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TutorInterfazPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(mainFrameForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TutorInterfazPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new mainFrameForm().setVisible(true);
+                new TutorInterfazPrincipal().setVisible(true);
             }
         });
     }
@@ -237,7 +264,6 @@ public class mainFrameForm extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem13;
     private javax.swing.JMenuItem jMenuItem14;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;

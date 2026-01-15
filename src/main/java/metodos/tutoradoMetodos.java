@@ -10,7 +10,6 @@ package metodos;
  */
 
 import db.conexion;
-import interfaz.altas.tutorComboBox;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

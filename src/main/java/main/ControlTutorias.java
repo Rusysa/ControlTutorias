@@ -6,7 +6,7 @@ package main;
 
 import db.conexion;
 import db.crearDb;
-import interfaz.AmainFrame.mainFrameForm;
+import interfaz.TutorInterfazPrincipal.TutorInterfazPrincipal;
 
 /**
  *
@@ -17,7 +17,7 @@ public class ControlTutorias {
     public static void main(String[] args) {
     
         javax.swing.SwingUtilities.invokeLater(() -> {
-            new mainFrameForm().setVisible(true);
+            new TutorInterfazPrincipal().setVisible(true);
         });
      
         crearDb creardb = new crearDb();

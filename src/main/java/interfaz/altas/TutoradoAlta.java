@@ -4,6 +4,7 @@
  */
 package interfaz.altas;
 
+import metodos.tutorComboBox;
 import entidades.Tutorados;
 import java.awt.Dimension;
 import java.sql.Connection;
@@ -101,7 +102,7 @@ public class TutoradoAlta extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, -1, -1));
 
         jLabel8.setText("Domicilio");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 370, -1, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, -1, -1));
 
         nombreTutorado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
