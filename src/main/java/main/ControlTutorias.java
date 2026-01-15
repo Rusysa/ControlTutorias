@@ -4,6 +4,10 @@
 
 package main;
 
+import db.conexion;
+import db.crearDb;
+import interfaz.AmainFrame.mainFrameForm;
+
 /**
  *
  * @author rudy
@@ -11,6 +15,21 @@ package main;
 public class ControlTutorias {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+    
+        javax.swing.SwingUtilities.invokeLater(() -> {
+            new mainFrameForm().setVisible(true);
+        });
+     
+        crearDb creardb = new crearDb();
+        
+        conexion conexion = new conexion();
+        conexion.establecerConexion();
+        
+        //La clase de "creardb" tiene el metodo de establecer conexion que ya dentro llama al metodo que crea las tablas
+        //creardb.establecerConexion();
+        //creardb.cerrarConexion();
+        
+        
+        
     }
 }

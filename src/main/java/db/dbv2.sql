@@ -64,8 +64,7 @@ CREATE TABLE IF NOT EXISTS "Inscripciones" (
 CREATE TABLE IF NOT EXISTS "Periodo" (
 	"id"	INTEGER,
 	"ciclo"	TEXT NOT NULL,
-	"fecha_inicio"	TEXT NOT NULL,
-	"fecha_fin"	TEXT NOT NULL,
+        "parte" TEXT CHECK(("parte" IN ('A', 'B')),
 	"es_activo"	INTEGER DEFAULT 0,
 	"eliminado"	INTEGER DEFAULT 0,
 	PRIMARY KEY("id" AUTOINCREMENT)
